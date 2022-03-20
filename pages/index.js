@@ -1,4 +1,3 @@
-import Image from "next/image";
 import AboutSection from "../src/components/AboutSection";
 import HomeSection from "../src/components/HomeSection";
 import MessageSection from "../src/components/MessageSection";
@@ -11,6 +10,12 @@ export default function Home() {
       <HomeSection />
       <AboutSection />
       <MessageSection />
+      <section className="bg-[url('/images/message.jpg')] bg-fixed  h-[500px] ">
+        <p>text</p>
+      </section>
+      <section className="h-[1000px]">
+        <p>text</p>
+      </section>
     </div>
   );
 }
