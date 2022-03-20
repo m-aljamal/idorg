@@ -1,10 +1,11 @@
 import React from "react";
+import { Element } from "react-scroll";
 
 const MessageSection = () => {
   return (
-    <div className="bg-black text-white text-center p-3" >
+    <Element className="bg-black text-white text-center p-3 h-screen" name="message">
       <p>Message</p>
-    </div>
+    </Element>
   );
 };
 

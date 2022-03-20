@@ -6,7 +6,7 @@ import Navbar from "../src/components/Navbar";
 
 export default function Home() {
   return (
-    <div>
+    <div className="scroll-smooth">
       <Navbar />
       <HomeSection />
       <AboutSection />
