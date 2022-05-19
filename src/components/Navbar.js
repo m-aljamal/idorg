@@ -22,13 +22,12 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full bg-gray-50 text-black py-2 fixed dark:bg-black bg-opacity-80 dark:bg-opacity-80 backdrop-blur dark:backdrop-blur transition duration-500  ease-in-out  z-50 ">
+    <div className="w-full bg-gray-50 text-black py-1 fixed dark:bg-black bg-opacity-80 dark:bg-opacity-80 backdrop-blur dark:backdrop-blur z-50 ">
       <div className="container flex justify-around items-center">
-        <div>
+        <div className=" relative w-1/4 h-14">
           <Image
             src="/images/logo.png"
-            width={300}
-            height={50}
+            layout="fill"
             priority
             objectFit="contain"
           />
