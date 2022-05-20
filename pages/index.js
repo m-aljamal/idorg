@@ -6,7 +6,7 @@ import OurServices from "../src/components/OurServices";
 
 export default function Home() {
   return (
-    <div className="scroll-smooth">
+    <div style={{direction:"rtl"}} >
       <Navbar />
       <HomeSection />
       <AboutSection />
