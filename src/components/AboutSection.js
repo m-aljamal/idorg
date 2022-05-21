@@ -15,8 +15,8 @@ const AboutSection = () => {
           </div>
         </div>
         <div className="grid grid-cols-3 pt-16 place-items-center">
-          {aboutText.map(({ icon, title, description }) => (
-            <div className="flex gap-5   ">
+          {aboutText.map(({ icon, title, description, id }) => (
+            <div className="flex gap-5   " key={id}>
               <div>{icon}</div>
               <div className="bg-primary h-6 w-[1px]"></div>
               <div>
