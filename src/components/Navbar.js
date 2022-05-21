@@ -19,6 +19,10 @@ const Navbar = () => {
       label: "من نحن",
       to: "about",
     },
+    {
+      label: "خدماتنا",
+      to: "services",
+    },
   ];
 
   return (
