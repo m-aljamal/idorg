@@ -1,14 +1,14 @@
 import Image from "next/image";
 import React from "react";
-import { accordionData, services } from "../utils/text";
+import { accordionData, achivmentsData, services } from "../utils/text";
 
 const OurServices = () => {
   const [open, setOpen] = React.useState({
     id: 0,
   });
   return (
-    <section name="services">
-      <div className="container bg-gray-50 py-20">
+    <section name="services" className="bg-gray-50">
+      <div className="  py-20 container">
         <div className=" pb-10 text-center">
           <h2 className="font-medium text-3xl text-gray-700">خدماتنا</h2>
           <p className="text-gray-600 w-3/4 mx-auto  mt-4">
@@ -18,7 +18,7 @@ const OurServices = () => {
             proident ea duis eu aute sit sint laborum qui veniam occaecat
           </p>
         </div>
-        <div className="grid grid-cols-4 gap-8 ">
+        <div className="grid grid-cols-4 gap-8">
           {services.map(({ id, description, icon, title }) => (
             <div
               key={id}
@@ -38,11 +38,18 @@ const OurServices = () => {
           ))}
         </div>
       </div>
-      <div className="bg-white grid grid-cols-4 py-8 container">
-        <h2>350</h2>
-        <h2>350</h2>
-        <h2>350</h2>
-        <h2>350</h2>
+      <div className="bg-white py-14 ">
+        <div className="container grid grid-cols-4 place-items-center ">
+          {achivmentsData.map(({ id, number, title, icon }) => (
+            <div key={id} className="flex items-center gap-2">
+              {icon}
+              <div>
+                <h2 className="text-3xl  font-medium">{number}</h2>
+                <p className="text-gray-700">{title}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="grid grid-cols-2   bg-gray-50 items-center">
         <div className=" relative h-full  ">

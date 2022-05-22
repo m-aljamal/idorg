@@ -1,3 +1,5 @@
+import { CashIcon, ArchiveIcon } from "@heroicons/react/outline";
+
 export const aboutText = [
   {
     id: 1,
@@ -188,5 +190,32 @@ export const accordionData = [
     title: "خدمات اغاثية",
     content:
       "​انطلاقاً من تعاليم ديننا الإسلامي الحنيف التي توجب إغاثة الملهوف ومساعدة المحتاج، والمحافظة على ​حياة الإنسان وكرامته وصحته وامتداداً للدور الإنساني للمملكة العربية السعودية ورسالتها العالمية في هذا المجال.",
+  },
+];
+
+export const achivmentsData = [
+  {
+    id: 0,
+    number: 350,
+    title: "الجمعيات المستفيدة",
+    icon: <ArchiveIcon className="w-14 h-14" />,
+  },
+  {
+    id: 0,
+    number: 350,
+    title: "الجمعيات المستفيدة",
+    icon: <CashIcon className="w-14 h-14" />,
+  },
+  {
+    id: 0,
+    number: 350,
+    title: "الجمعيات المستفيدة",
+    icon: <CashIcon className="w-14 h-14" />,
+  },
+  {
+    id: 0,
+    number: 350,
+    title: "الجمعيات المستفيدة",
+    icon: <CashIcon className="w-14 h-14" />,
   },
 ];
