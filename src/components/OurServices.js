@@ -22,7 +22,7 @@ const OurServices = () => {
           {services.map(({ id, description, icon, title }) => (
             <div
               key={id}
-              className="border p-8 text-center rounded-md bg-white border-b-primary
+              className="border p-8  text-center rounded-md bg-white border-b-primary
                hover:bg-gray-700
                 hover:text-white
                 text-gray-600
@@ -61,6 +61,7 @@ const OurServices = () => {
           <div>
             {accordionData.map(({ id, title, content }) => (
               <Accordion
+                key={id}
                 id={id}
                 title={title}
                 content={content}
