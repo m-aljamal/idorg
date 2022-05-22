@@ -2,6 +2,9 @@ module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      transitionProperty: {
+        height: "height",
+      },
       colors: {
         primary: "#00A6E2",
         secondary: "#374151",

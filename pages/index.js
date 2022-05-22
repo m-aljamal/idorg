@@ -10,6 +10,7 @@ export default function Home() {
       <HomeSection />
       <AboutSection />
       <OurServices />
+      <p className="py-20 bg-white">fdfd</p>
     </div>
   );
 }
