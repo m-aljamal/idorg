@@ -23,6 +23,10 @@ const Navbar = () => {
       label: "خدماتنا",
       to: "services",
     },
+    {
+      label: "تواصل معنا",
+      to: "contactus",
+    },
   ];
 
   return (

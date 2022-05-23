@@ -7,7 +7,7 @@ const OurServices = () => {
     id: 0,
   });
   return (
-    <section name="services" className="bg-gray-50">
+    <section name="services" className="bg-gray-100">
       <div className="  py-20 container">
         <div className=" pb-10 text-center">
           <h2 className="font-medium text-3xl text-gray-700">خدماتنا</h2>
@@ -38,19 +38,7 @@ const OurServices = () => {
           ))}
         </div>
       </div>
-      <div className="bg-white py-14 ">
-        <div className="container grid grid-cols-4 place-items-center ">
-          {achivmentsData.map(({ id, number, title, icon }) => (
-            <div key={id} className="flex items-center gap-2">
-              {icon}
-              <div>
-                <h2 className="text-3xl  font-medium">{number}</h2>
-                <p className="text-gray-700">{title}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+
       <div className="grid grid-cols-2   bg-gray-50 items-center">
         <div className=" relative h-full  ">
           <Image src="/images/child.jpg" layout="fill" objectFit="cover" />
@@ -79,6 +67,19 @@ const OurServices = () => {
               />
             ))}
           </div>
+        </div>
+      </div>
+      <div className="bg-white py-14 ">
+        <div className="container grid grid-cols-4 place-items-center ">
+          {achivmentsData.map(({ id, number, title, icon }) => (
+            <div key={id} className="flex items-center gap-2">
+              {icon}
+              <div>
+                <h2 className="text-3xl  font-medium">{number}</h2>
+                <p className="text-gray-700">{title}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

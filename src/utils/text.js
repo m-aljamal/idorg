@@ -1,4 +1,9 @@
-import { CashIcon, ArchiveIcon } from "@heroicons/react/outline";
+import {
+  CashIcon,
+  ArchiveIcon,
+  LocationMarkerIcon,
+  ChatIcon,
+} from "@heroicons/react/outline";
 
 export const aboutText = [
   {
@@ -217,5 +222,28 @@ export const achivmentsData = [
     number: 350,
     title: "الجمعيات المستفيدة",
     icon: <CashIcon className="w-14 h-14" />,
+  },
+];
+
+export const contactInfo = [
+  {
+    id: 0,
+    icon: <LocationMarkerIcon className="w-8 h-8" />,
+    title: "العنوان",
+    text: `الجامعة الإسلامية المكرمة المصرية`,
+  },
+
+  {
+    id: 1,
+    icon: <ChatIcon className="w-8 h-8" />,
+    title: "العنوان",
+    text: `الجامعة الإسلامية المكرمة المصرية`,
+  },
+
+  {
+    id: 2,
+    icon: <LocationMarkerIcon className="w-8 h-8" />,
+    title: "العنوان",
+    text: `الجامعة الإسلامية المكرمة المصرية`,
   },
 ];
