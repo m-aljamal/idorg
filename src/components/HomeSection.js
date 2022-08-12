@@ -7,26 +7,16 @@ import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 const HomeSection = () => {
   return (
-    // <div className="relative h-screen" name="home">
-    //   <div className="absolute bg-gray-900 top-0 bottom-0 left-0 right-0 bg-opacity-40 z-10"></div>
-    //   <div className="   text-white z-30  absolute top-0 bottom-0 flex  items-center justify-center right-[50%]     ">
-    //     <h1 className="text-4xl">كتابة نص</h1>
-    //   </div>
-    //   <Image
-    //     src="/images/home.jpg"
-    //     layout="fill"
-    //     alt="main"
-    //     objectFit="cover"
-    //     priority
-    //   />
-    // </div>
     <div className="relative" name="home">
       <Swiper
         spaceBetween={10}
         slidesPerView={1}
-        autoplay
+        autoplay={{
+          delay: 5000,
+        }}
         modules={[Autoplay, EffectFade]}
         effect="fade"
+        dir="ltr"
       >
         <SwiperSlide>
           <ImageContainer>
@@ -105,8 +95,10 @@ const ImageContainer = ({ children }) => {
 
 const TextContainer = ({ text }) => {
   return (
-    <div className=" container flex justify-center text-center">
-      {/* <div className="bg-white z-20 absolute top-1/2 w-full h-20 opacity-50"/>  */}
+    <div
+      className=" container flex justify-center text-center"
+      style={{ direction: "rtl" }}
+    >
       <div className="text-gray-800 z-30 absolute container  bottom-6 bg-white w-1/2 py-2 rounded-md opacity-60">
         <h2 className=" text-2xl font-bold ">{text}</h2>
       </div>

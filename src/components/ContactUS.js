@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { PhoneIcon, AtSymbolIcon } from "@heroicons/react/outline";
 const ContactUS = () => {
   return (
     <section name="contactus">
@@ -30,7 +31,21 @@ const ContactUS = () => {
           </form>
         </div>
         <div className="relative h-full">
-          <Image src="/images/contact.jpg" layout="fill" objectFit="cover" />
+          <Image src="/images/contactUs.jpg" layout="fill" objectFit="cover" />
+        </div>
+      </div>
+      <div>
+        <div className=" container py-10 flex justify-around">
+          <div className="flex gap-2">
+            <p className="text-2xl">info@idorg.org</p>
+            <AtSymbolIcon className="w-7 h-7 text-primary " />
+          </div>
+          <div className="flex gap-2">
+            <p className="text-2xl" style={{ direction: "ltr" }}>
+              +903488020992
+            </p>
+            <PhoneIcon className="w-7 h-7 text-primary " />
+          </div>
         </div>
       </div>
       <div>

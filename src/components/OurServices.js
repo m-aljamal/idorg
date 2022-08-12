@@ -35,7 +35,7 @@ const OurServices = () => {
 
       <div className="grid grid-cols-2   bg-gray-50 items-center">
         <div className=" relative h-full  ">
-          <Image src="/images/child.jpg" layout="fill" objectFit="cover" />
+          <Image src="/images/OurService.jpg" layout="fill" objectFit="cover" />
         </div>
         <div className=" px-12  py-12">
           <div className="py-4">
