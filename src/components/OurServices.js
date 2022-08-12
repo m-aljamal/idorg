@@ -10,13 +10,7 @@ const OurServices = () => {
     <section name="services" className="bg-gray-100">
       <div className="  py-20 container">
         <div className=" pb-10 text-center">
-          <h2 className="font-medium text-3xl text-gray-700">خدماتنا</h2>
-          <p className="text-gray-600 w-3/4 mx-auto  mt-4">
-            Deserunt irure consectetur magna veniam laboris aute excepteur. Nisi
-            mollit do aute dolor. Dolore magna laborum ipsum nulla magna aliqua.
-            Nostrud amet laborum sit in officia anim fugiat. Cupidatat mollit
-            proident ea duis eu aute sit sint laborum qui veniam occaecat
-          </p>
+          <h2 className="font-medium text-3xl text-gray-700">برامجنا</h2>
         </div>
         <div className="grid grid-cols-4 gap-8">
           {services.map(({ id, description, icon, title }) => (
@@ -28,8 +22,8 @@ const OurServices = () => {
                 text-gray-600
                 transition duration-150 ease-out hover:scale-110"
             >
-              <div className="bg-primary w-20 h-20 flex justify-center items-center rounded-full mx-auto">
-                {icon}
+              <div className="bg-primary w-20 h-20 flex justify-center items-center rounded-full mx-auto ">
+                <Image src={icon} width={50} height={50} />
               </div>
 
               <h2 className=" pt-8 pb-2 font-semibold text-lg">{title}</h2>
@@ -43,13 +37,12 @@ const OurServices = () => {
         <div className=" relative h-full  ">
           <Image src="/images/child.jpg" layout="fill" objectFit="cover" />
         </div>
-        <div className=" px-12  py-12     ">
-          <div className="py-4  ">
-            <h2 className="text-xl text-gray-800">
-              نقدم خدماتنا لجميع الأطفال في مناطق الحروب
-            </h2>
+        <div className=" px-12  py-12">
+          <div className="py-4">
+            <h2 className="text-xl text-primary">تعمل İNSANLIĞIN IRMAĞI</h2>
             <h2 className="font-medium text-2xl">
-              خدمات صحية, طبية, اغاثية وتعليمية
+              على تحقيق التطور والارتقاء في الجوانب التعليمية والاقتصادية
+              والصحية والإنسانية
             </h2>
           </div>
 
@@ -72,8 +65,8 @@ const OurServices = () => {
       <div className="bg-white py-14 ">
         <div className="container grid grid-cols-4 place-items-center ">
           {achivmentsData.map(({ id, number, title, icon }) => (
-            <div key={id} className="flex items-center gap-2">
-              {icon}
+            <div key={id} className="flex items-center gap-5">
+              <Image src={icon} width={60} height={60} />
               <div>
                 <h2 className="text-3xl  font-medium">{number}</h2>
                 <p className="text-gray-700">{title}</p>

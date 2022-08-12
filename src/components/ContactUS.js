@@ -1,15 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import { contactInfo } from "../utils/text";
 const ContactUS = () => {
   return (
     <section name="contactus">
       <div className="grid grid-cols-2  ">
-        <div className="bg-gray-900 text-white container py-12  text-center ">
-          <h2 className="text-gray-400">
-            املأ النموذج وسنكون على اتصال قريبًا!
-          </h2>
-          <p className="text-2xl"> هل أنت جاهز لطلب عرض أسعار؟</p>
+        <div className="bg-gray-900 text-white container py-12 text-center">
+          <h2 className="text-gray-400">للتواصل معنا</h2>
+          <p className="text-2xl"> يُرجى ملء النموذج التالي</p>
           <form>
             <input
               placeholder="الاسم"
@@ -36,16 +33,20 @@ const ContactUS = () => {
           <Image src="/images/contact.jpg" layout="fill" objectFit="cover" />
         </div>
       </div>
-      <div className="bg-gray-50 py-8">
-        <div className=" flex justify-between container text-center  ">
-          {contactInfo.map(({ id, icon, title, text }) => (
-            <div key={id}>
-              <div className="flex justify-center py-2">{icon}</div>
-              <h2 className="font-medium">{title}</h2>
-              <p className="text-gray-600">{text}</p>
-            </div>
-          ))}
-        </div>
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d799.6064328078656!2d37.131499999999996!3d36.7123354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152fd182979207a5%3A0xa1406f00cbc53b3f!2sYap%C4%B1%20Kredi%20Bankas%C4%B1%20ATM!5e0!3m2!1sar!2str!4v1660319194622!5m2!1sar!2str"
+          className="w-full h-[300px]"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div className="py-3 text-center">
+        <p>
+          جميع الحقوق محفوظة
+          <span>{new Date().getFullYear()}</span>
+          <span className="text-primary mx-2">İNSANLIĞIN IRMAĞI</span>
+        </p>
       </div>
     </section>
   );

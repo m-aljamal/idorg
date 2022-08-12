@@ -1,23 +1,28 @@
 import React from "react";
 import { aboutText } from "../utils/text";
-
+import Image from "next/image";
 const AboutSection = () => {
   return (
     <main name="about">
       <section className="py-24 container">
         <div className="text-center">
-          <h2 className="text-primary text-lg font-bold">
-            نحن نقدم منتجات رقمية جميلة
-          </h2>
+          <h2 className="text-primary text-lg font-bold">İNSANLIĞIN IRMAĞI</h2>
           <div className="text-2xl text-gray-700 pt-2 ">
-            <p>نحن نقدم جودة عالية وفعالة من حيث التكلفة في الخارج</p>
-            <p>خدمات تطوير الويب والبرمجيات</p>
+            <p>
+              ، مرخصة تعمل في سوريا وتركيا، وهي مستقلة ولا تتبع لأي جهة سياسية
+              أو إيديولوجية، كما تتمتع المنظمة بشخصية وذمة مالية مستقلة، تعمل
+              على تأمين الاحتياجات الأساسية والضرورية للمجتمع المدني، من أجل
+              خدمة الفرد وبناء الإنسان والذي بدوره يؤدي إلى بناء المجتمع المدني
+              المتجانس.
+            </p>
           </div>
         </div>
-        <div className="grid grid-cols-3 pt-16 place-items-center">
+        <div className="grid grid-cols-3 pt-16  ">
           {aboutText.map(({ icon, title, description, id }) => (
-            <div className="flex gap-5" key={id}>
-              <div>{icon}</div>
+            <div className="flex gap-3 items-start" key={id}>
+              <div className=" relative h-8 w-10">
+                <Image src={icon} layout="fill" objectFit="cover" />
+              </div>
               <div className="bg-primary h-6 w-[1px]"></div>
               <div>
                 <h3 className="text-gray-800 font-medium text-lg">{title}</h3>
@@ -30,11 +35,10 @@ const AboutSection = () => {
       <section className="bg-[url('/images/bg.jpg')] flex justify-center items-center  relative  bg-cover bg-fixed  h-[600px] ">
         <div className="bg-black w-full h-full opacity-50 absolute  "></div>
         <div className=" relative  container text-center    ">
-          <h2 className="text-primary text-xl">
-            نص تجريبي يحتوي على بعض النصوص التي تستخدم في التصميم.
-          </h2>
+          <h2 className="text-primary text-2xl">أغث سوريا</h2>
           <p className="text-white text-3xl">
-            نص تجريبي يحتوي على بعض النصوص التي تستخدم في التصميم.
+            مأساة إنسانية حلّت على أهلنا في سوريا لتزيد من قساوة الحياة والظروف
+            المعيشية الصعبة. عشرات الجرحى بحاجة عاجلة إلى العلاج...
           </p>
         </div>
       </section>

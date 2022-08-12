@@ -32,6 +32,11 @@ const Navbar = () => {
   return (
     <div className="w-full  bg-white text-black py-1 fixed bg-opacity-90 backdrop-blur z-50 ">
       <div className="container flex  justify-between items-center gap-16">
+        <div className=" flex md:gap-8 gap-4 flex-1">
+          {links.map(({ to, label }) => (
+            <Nav to={to} label={label} key={label} />
+          ))}
+        </div>
         <div className=" relative  w-1/4 h-14">
           <Image
             src="/images/logo.png"
@@ -39,11 +44,6 @@ const Navbar = () => {
             priority
             objectFit="contain"
           />
-        </div>
-        <div className=" flex md:gap-8 gap-4 flex-1">
-          {links.map(({ to, label }) => (
-            <Nav to={to} label={label} key={label} />
-          ))}
         </div>
       </div>
     </div>
