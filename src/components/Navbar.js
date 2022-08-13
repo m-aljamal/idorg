@@ -25,33 +25,35 @@ const Navbar = () => {
   return (
     <div className="w-full  bg-white text-black py-1 fixed bg-opacity-90 backdrop-blur z-50 ">
       <div className="container flex  justify-between items-center gap-16">
-        <div className=" md:flex md:gap-8 gap-4 flex-1 hidden">
+        <div className=" md:flex md:gap-8 gap-4 flex-1 hidden w-full">
           {links.map(({ to, label }) => (
             <Nav to={to} label={label} key={label} />
           ))}
         </div>
-        <div className=" relative  w-1/4 h-14">
+          <MobileNav />
+        <div className=" relative  w-60 h-14">
           <Image
             src="/images/logo.png"
             layout="fill"
             priority
             objectFit="contain"
+            className=''
           />
         </div>
-        <MobileNav />
       </div>
     </div>
   );
 };
 
-const Nav = ({ to, label }) => {
+const Nav = ({ to, label,...props }) => {
   return (
     <Link
       to={to}
       smooth
       activeClass="text-primary"
       spy
-      className="text-lg cursor-pointer "
+      className="text-md lg:text-lg cursor-pointer  "
+      {...props}
     >
       {label}
     </Link>
@@ -76,11 +78,15 @@ const MobileNav = () => {
             >
               <path
                 d="M0 1H14M0 7H14M0 13H14"
-                className={`origin-center transition scale-90 opacity-0": ${open}`}
+                className={`origin-center transition scale-90   ${
+                  open ? "opacity-0" : ""
+                }`}
               />
               <path
                 d="M2 2L12 12M12 2L2 12"
-                className={`origin-center transition "scale-90 opacity-0": ${!open}  `}
+                className={`origin-center transition "scale-90  ${
+                  !open ? "opacity-0" : ""
+                }  `}
               />
             </svg>
           </Popover.Button>
@@ -111,7 +117,9 @@ const MobileNav = () => {
               >
                 <div className=" flex flex-col">
                   {links.map(({ to, label }) => (
-                    <Nav to={to} label={label} key={label} />
+                    <span>
+                      <Nav to={to} label={label} key={label} onClick={() => close()} />
+                    </span>
                   ))}
                 </div>
               </Popover.Panel>

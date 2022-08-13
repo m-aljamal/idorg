@@ -12,7 +12,7 @@ const OurServices = () => {
         <div className=" pb-10 text-center">
           <h2 className="font-medium text-3xl text-gray-700">برامجنا</h2>
         </div>
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid lg:grid-cols-4 grid-cols-1 md:grid-cols-3 gap-8">
           {services.map(({ id, description, icon, title }) => (
             <div
               key={id}
@@ -33,14 +33,14 @@ const OurServices = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2   bg-gray-50 items-center">
-        <div className=" relative h-full  ">
+      <div className="grid md:grid-cols-2 grid-cols-1   bg-gray-50 items-center">
+        <div className=" relative md:h-full  h-[350px]   ">
           <Image src="/images/OurService.jpg" layout="fill" objectFit="cover" />
         </div>
         <div className=" px-12  py-12">
           <div className="py-4">
             <h2 className="text-xl text-primary">تعمل İNSANLIĞIN IRMAĞI</h2>
-            <h2 className="font-medium text-2xl">
+            <h2 className="font-medium md:text-2xl text-xl">
               على تحقيق التطور والارتقاء في الجوانب التعليمية والاقتصادية
               والصحية والإنسانية
             </h2>
@@ -63,16 +63,18 @@ const OurServices = () => {
         </div>
       </div>
       <div className="bg-white py-14 ">
-        <div className="container grid grid-cols-4 place-items-center ">
-          {achivmentsData.map(({ id, number, title, icon }) => (
-            <div key={id} className="flex items-center gap-5">
-              <Image src={icon} width={60} height={60} />
-              <div>
-                <h2 className="text-3xl  font-medium">{number}</h2>
-                <p className="text-gray-700">{title}</p>
+        <div className='container flex md:flex-row flex-col justify-center items-center'>
+          <div className='md:flex gap-8' >
+            {achivmentsData.map(({ id, number, title, icon }) => (
+              <div key={id} className="flex flex-row   items-center  gap-5">
+                <Image src={icon} width={60} height={60} />
+                <div>
+                  <h2 className="md:text-3xl text-xl font-medium">{number}</h2>
+                  <p className="text-gray-700">{title}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
