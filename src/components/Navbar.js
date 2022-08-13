@@ -117,7 +117,7 @@ const MobileNav = () => {
               >
                 <div className=" flex flex-col">
                   {links.map(({ to, label }) => (
-                    <span>
+                    <span key={label}>
                       <Nav to={to} label={label} key={label} onClick={() => close()} />
                     </span>
                   ))}
