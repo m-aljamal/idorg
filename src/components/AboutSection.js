@@ -21,7 +21,7 @@ const AboutSection = () => {
           {aboutText.map(({ icon, title, description, id }) => (
             <div className="flex gap-3 items-start" key={id}>
               <div className=" relative h-6 w-10">
-                <Image src={icon} layout="fill" objectFit="cover" />
+                <Image src={icon} layout="fill" objectFit="cover" alt={title} />
               </div>
               <div className="bg-primary h-6 w-[1px]"></div>
               <div>
@@ -48,5 +48,6 @@ const AboutSection = () => {
     </main>
   );
 };
+
 
 export default AboutSection;

@@ -31,6 +31,7 @@ const HomeSection = () => {
               objectFit="cover"
               objectPosition="bottom"
               priority
+              
             />
           </ImageContainer>
         </SwiperSlide>

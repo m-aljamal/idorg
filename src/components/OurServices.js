@@ -23,7 +23,7 @@ const OurServices = () => {
                 transition duration-150 ease-out hover:scale-110"
             >
               <div className="bg-primary w-20 h-20 flex justify-center items-center rounded-full mx-auto ">
-                <Image src={icon} width={50} height={50} />
+                <Image src={icon} width={50} height={50} alt={title} />
               </div>
 
               <h2 className=" pt-8 pb-2 font-semibold text-lg">{title}</h2>
@@ -35,7 +35,12 @@ const OurServices = () => {
 
       <div className="grid md:grid-cols-2 grid-cols-1   bg-gray-50 items-center">
         <div className=" relative md:h-full  h-[350px]   ">
-          <Image src="/images/OurService.jpg" layout="fill" objectFit="cover" />
+          <Image
+            src="/images/OurService.jpg"
+            layout="fill"
+            objectFit="cover"
+            alt="serive"
+          />
         </div>
         <div className=" px-12  py-12">
           <div className="py-4">
@@ -63,11 +68,11 @@ const OurServices = () => {
         </div>
       </div>
       <div className="bg-white py-14 ">
-        <div className='container flex md:flex-row flex-col justify-center items-center'>
-          <div className='md:flex gap-8' >
+        <div className="container flex md:flex-row flex-col justify-center items-center">
+          <div className="md:flex gap-8">
             {achivmentsData.map(({ id, number, title, icon }) => (
               <div key={id} className="flex flex-row   items-center  gap-5">
-                <Image src={icon} width={60} height={60} />
+                <Image src={icon} width={60} height={60} alt={title} />
                 <div>
                   <h2 className="md:text-3xl text-xl font-medium">{number}</h2>
                   <p className="text-gray-700">{title}</p>

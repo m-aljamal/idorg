@@ -11,6 +11,7 @@ const ContactUS = () => {
             layout="fill"
             objectFit="cover"
             objectPosition="top"
+            alt="contact us"
           />
         </div>
         <div className="bg-gray-900 text-white   py-12 text-center">
@@ -46,6 +47,7 @@ const ContactUS = () => {
             layout="fill"
             objectFit="cover"
             objectPosition="top"
+            alt="contact us"
           />
         </div>
       </div>

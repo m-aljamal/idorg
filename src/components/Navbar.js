@@ -38,6 +38,7 @@ const Navbar = () => {
             priority
             objectFit="contain"
             className=''
+            alt="logo"
           />
         </div>
       </div>
